@@ -54,7 +54,7 @@ import { useNavigate, Outlet } from 'react-router-dom';
       <Layout style={{ minHeight: '100vh' }}>
         <Sider collapsible collapsed={collapsed} onCollapse={value => setCollapsed(value)}>
           <div className="logo" />
-          <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} 
+          <Menu theme="dark" defaultSelectedKeys={['/about']} mode="inline" items={items} 
             onClick={ menuClick } />
         </Sider>
         <Layout className="site-layout">

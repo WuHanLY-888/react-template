@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import styleImport, { AntdResolve } from 'vite-plugin-style-import'
-import { resolve, dirname } from 'path'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import styleImport, { AntdResolve } from 'vite-plugin-style-import';
+import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -11,15 +11,15 @@ const __dirname = dirname(__filename);
 export default defineConfig(() => ({
   plugins: [
     react(),
-    styleImport({
-      resolves: [
-        AntdResolve()
-      ]
-    })
+    // styleImport({
+    //   resolves: [
+    //     AntdResolve()
+    //   ]
+    // })
   ],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src')
-    }
-  }
-}))
+      '@': resolve(__dirname, './src'),
+    },
+  },
+}));
