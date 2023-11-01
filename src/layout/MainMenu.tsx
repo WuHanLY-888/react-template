@@ -60,7 +60,7 @@ const App: React.FC = () => {
       break;
     }
   }
-  console.log(firstOpenKey);
+  // console.log(firstOpenKey);
 
   const [openKeys, setOpenkeys] = useState([firstOpenKey]);
   const handleOpenChange = (key: string[]) => {

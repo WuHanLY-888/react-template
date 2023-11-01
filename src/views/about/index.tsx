@@ -1,6 +1,16 @@
-const View = () => (
+import { useSelector } from 'react-redux';
+
+const View = () => {
+  const { num } = useSelector((state) => ({
+    num: state.num,
+  }));
+  console.log(num);
+
+  return (
     <div>
-        <p>about</p>
+      <p>{num}</p>
+      <p>about</p>
     </div>
-)
-export default View
+  );
+};
+export default View;
