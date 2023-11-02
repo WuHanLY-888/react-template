@@ -1,5 +1,7 @@
 .loginPage{
   position: relative;
+  width: 100%;
+  height: 100%;
   .loginBox{
       width: 450px;
       position: absolute;
@@ -9,6 +11,8 @@
       color:#fff;
       
       .loginBoxSon1 {
+        width: 100px;
+        height: 100px;
         .hello {
             display: grid;
             background-color: #1976D2;

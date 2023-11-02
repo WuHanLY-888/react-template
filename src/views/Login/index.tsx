@@ -6,6 +6,10 @@ import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import './login.less';
 import { useNavigate } from 'react-router-dom';
 // import { CaptchaAPI, LoginAPI } from "@/request/api"
+
+
+console.log(styles);
+
 const view = () => {
   let navigateTo = useNavigate();
   // 加载完这个组件之后，加载背景
@@ -93,8 +97,8 @@ const view = () => {
       {/* 登录盒子 */}
       <div className={styles.loginBox + ' loginbox'}>
         {/* 标题部分 */}
-        <div className={styles.title}>
-          <h1>前端乐哥&nbsp;·&nbsp;通用后台系统</h1>
+        <div className={styles.hello}>
+          <h1>react&nbsp;·&nbsp;通用后台系统</h1>
           <p>Strive Everyday</p>
         </div>
         {/* 表单部分 */}
