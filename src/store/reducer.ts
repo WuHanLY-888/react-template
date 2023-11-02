@@ -1,20 +1,15 @@
-const defaultState = {
-  num: 12,
-};
+export default function <T>(NumState: { state: T; action: any }) {
+  return function (
+    state = NumState.state,
+    action: { type: string; value: number },
+  ): T {
+    const newState = JSON.parse(JSON.stringify(state));
 
-export default function (
-  state = defaultState,
-  action: { type: string; value: number },
-) {
-  const newState = JSON.parse(JSON.stringify(state));
-  switch (action.type) {
-    case 'add':
-      newState.num++;
-      break;
-    case 'addAny':
-      newState.num += action.value;
-      break;
-  }
+    const key = Object.keys(NumState.action).find(
+      (item) => item === action.type,
+    );
+    key && NumState.action[key](newState, action);
 
-  return newState;
+    return newState;
+  };
 }
