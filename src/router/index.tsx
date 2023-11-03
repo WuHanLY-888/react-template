@@ -8,9 +8,11 @@ const Layout = lazy(() => import('@/layout'));
 const About = lazy(() => import('@/views/about'));
 const Page1 = lazy(() => import('@/views/page1'));
 const Page2 = lazy(() => import('@/views/about copy 2'));
+
 const withLoadingComponent = (comp: JSX.Element) => (
   <React.Suspense>{comp}</React.Suspense>
 );
+
 const routes = [
   {
     path: '/',
@@ -19,10 +21,15 @@ const routes = [
   {
     path: '/',
     element: withLoadingComponent(<Layout />),
+    auth: true,
     children: [
       {
         path: '/about',
         element: withLoadingComponent(<About />),
+        meta: {
+          about: 'test',
+        },
+        auth: true,
       },
       {
         path: '/page1',
@@ -38,10 +45,10 @@ const routes = [
     path: '/login',
     element: withLoadingComponent(<Login />),
   },
-  {
-    path: '*',
-    element: <Navigate to="/about" />,
-  },
+  // {
+  //   path: '*',
+  //   element: <Navigate to="/about" />,
+  // },
 ];
 
 export default routes;

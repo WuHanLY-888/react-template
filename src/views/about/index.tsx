@@ -13,7 +13,7 @@ const View = () => {
   const dispatch = useDispatch();
   const changeNum = () => {
     // dispatch({ type: 'addAny', value: 10 });
-    dispatch(asyncDis({ type: 'addAny', value: 10 }, 500));
+    dispatch(asyncDis({ type: 'addAny', value: 10 }, 500) as any);
     // dispatch((dis) => {
     //   setTimeout(() => {
     //     dis({ type: 'addAny', value: 10 });

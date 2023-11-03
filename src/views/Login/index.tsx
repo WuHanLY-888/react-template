@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 // import { CaptchaAPI, LoginAPI } from "@/request/api"
 
 
-console.log(styles);
+// console.log(styles);
 
 const view = () => {
   let navigateTo = useNavigate();

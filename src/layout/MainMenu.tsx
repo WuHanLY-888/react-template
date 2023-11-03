@@ -54,7 +54,7 @@ const App: React.FC = () => {
     return obj.key === currentRoute.pathname;
   }
   for (let i of items) {
-    if (i?.children?.find(findKey)) {
+    if ((i as any).children?.find(findKey)) {
       // console.log(i);
       firstOpenKey = i.key as string;
       break;
