@@ -8,6 +8,7 @@ const { Header, Content, Footer, Sider } = Layout;
 
 const App: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false);
+  console.log('layout');
 
   return (
     <Layout style={{ minHeight: '100vh' }}>

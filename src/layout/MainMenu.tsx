@@ -64,12 +64,12 @@ const App: React.FC = () => {
 
   const [openKeys, setOpenkeys] = useState([firstOpenKey]);
   const handleOpenChange = (key: string[]) => {
-    // console.log(key);
+    console.log(key);
     setOpenkeys([key[key.length - 1]]);
   };
 
   // console.log(currentRoute);
-  // console.log('hello');
+  console.log('hello');
 
   // setOpenkeys([firstOpenKey]);
 
